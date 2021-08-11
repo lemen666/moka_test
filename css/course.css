@@ -1,0 +1,57 @@
+
+.course>.wrap{
+    /* background-color: blueviolet !important; */
+   display: flex;
+}
+.course>.wrap>.left{
+    background-color: rgb(182, 197, 214);
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.course>.wrap>.left>.inner{
+    text-align: center;
+    color: rgb(36, 63, 112);
+    width:70%;
+    position: relative;
+}
+.course>.wrap>.left>canvas{
+    position: absolute;
+   
+}
+
+.course>.wrap>.left>.inner>ul>li{
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+    border: 1px solid rgb(201, 226, 238);
+    transition: 3s all;
+}
+.course>.wrap>.left>.inner>ul>li.in{
+    box-shadow: rgb(161, 171, 181) 5px 5px 5px;
+    background-color: rgba(245, 245, 245, 0.315);
+    margin-left: 0px;
+}
+.course>.wrap>.left>.inner>ul>li.out,.course>.wrap>.left>.inner>ul>li:hover{
+    box-shadow: rgb(161, 171, 181) 8px 13px 8px;
+    background-color: rgba(245, 245, 245, 0.89);
+    margin-left: 300px;
+}
+.course>.wrap>.right{
+ background-color: rgb(182, 197, 214);
+ flex: 4;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.course>.wrap>.right>img{
+    height: 100%;
+    transition: all 3s;
+}
+.course>.wrap>.right>img.out{
+    transform: rotateY(360deg);
+}
+.course>.wrap>.right>img.in{
+    transform: rotateY(0deg);
+}

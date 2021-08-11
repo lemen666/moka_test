@@ -1,0 +1,129 @@
+#content > .list > .about section{
+    transition: all 2s;
+}
+#content > .list > .about .about1{ width: 100%;height: 100%;perspective: 1000px;transform-style: preserve-3d;}
+.about1 .cover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    transition: all 1s;
+}
+.about1 .cover h1{
+    color: whitesmoke;
+    font-size: 30px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.about1 .cover h1:hover{
+    cursor: pointer;
+}
+.about1  .cover:hover{
+    opacity: 0.4;
+}
+#content > .list > .about .about1 > li{position: absolute;left: 0;right: 0;top: 0;bottom: 0;visibility: hidden;box-shadow: rgb(120, 154, 185) 15px 15px 5px;}
+#content > .list > .about .about1 > li:nth-child(1){background:#dc6c5f;}
+#content > .list > .about .about1 > li:nth-child(2){background:#95dc84;}
+#content > .list > .about .about1 > li:nth-child(3){background:#64b9d2;}
+#content > .list > .about .about1 > li:nth-child(4){background:#000000;}
+#content > .list > .about .about1 > li.active{visibility: visible;}
+
+#content > .list > .about .about2{position: absolute;left: 0;right: 0;bottom:0;text-align: center;}
+#content > .list > .about .about2 > li {
+border-radius:50% ;width: 20px;height: 20px;background: rgba(255,255,255,0.5);display: inline-block;
+box-shadow: 0 0 4px rgba(25,25,25,0.8);cursor:pointer;
+}
+#content > .list > .about .about2 > li.active{background: white;cursor:default;}
+
+/*从左往右 leftHide  rightShow*/
+#content > .list > .about .about1 > li.leftHide{visibility: hidden;animation:1s leftHide 1 linear;}
+#content > .list > .about .about1 > li.rightShow{visibility: visible;animation:1s rightShow 1 linear;}
+@keyframes leftHide{
+    0%{visibility: visible;}
+    50%{transform: translateX(-40%) rotateY(30deg) scale(.8);}
+    100%{transform: translateZ(-200px);}
+}
+@keyframes rightShow{
+    0%{visibility: hidden;transform: translateZ(-200px);}
+    50%{transform: translateX(40%) rotateY(-30deg) scale(.8);}
+    100%{}
+}
+/*从右往左 leftShow  rightHide*/
+#content > .list > .about .about1 > li.leftShow{visibility: visible;animation:1s leftShow 1 linear;}
+#content > .list > .about .about1 > li.rightHide{visibility: hidden;animation:1s rightHide 1 linear;}
+@keyframes leftShow{
+    0%{visibility: hidden;transform: translateZ(-200px);}
+    50%{transform: translateX(-40%) rotateY(30deg) scale(.8);}
+    100%{}
+}
+@keyframes rightHide{
+    0%{visibility: visible;}
+    50%{transform: translateX(40%) rotateY(-30deg) scale(.8);}
+    100%{transform: translateZ(-200px);}
+}
+
+.photoView{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+    transform-origin: bottom right;
+    z-index: 999;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .photoView>.photoWrap{
+    background-color: blueviolet;
+    
+
+} */
+.photoView .icon{
+    cursor: pointer;
+    transition: all 500ms;
+    padding: 10px;
+    border-radius: 10px ;
+}
+.photoView .icon:hover{
+    background-color: rgba(255, 255, 240, 0.274);
+    
+}
+.photoView>.next{
+    position: absolute;
+    right: 200px;
+}
+.photoView>.pre{
+    position: absolute;
+    left: 200px;
+}
+.photoView>.close{
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.photoView>.close .icon{
+    width: 20px;
+    height: 20px;
+}
+.photoView>.photoWrap>ul>li{
+    /* background-color: khaki; */
+    overflow: hidden;
+
+} 
+.photoView>.photoWrap>ul>li>img{
+    margin: 0 auto;
+    width: initial;
+    max-height: 600px;
+    max-width: 800px;
+    transition: all 0.5s;
+}

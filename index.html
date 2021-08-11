@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>YangMi</title>
+		<link rel="stylesheet" href="./css/course.css">
+		<link rel="stylesheet" href="./css/home.css">
+		<link rel="stylesheet" href="./css/about.css">
+		<link rel="stylesheet" href="./css/team.css">
+		<script src="./icon/font_2708881_koq6jfy40za//iconfont.js"></script>
+		<style type="text/css">
+			/*css reset 开始*/
+			body {
+				-moz-user-select: none; /*火狐*/
+				-webkit-user-select: none; /*webkit浏览器*/
+				-ms-user-select: none; /*IE10*/
+				-khtml-user-select: none; /*早期浏览器*/
+				user-select: none;
+				
+			}
+			html,body{height: 100%;overflow: hidden;}
+			html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin: 0px;padding: 0px;font: 14px ; font-family:"微软雅黑";}
+			a{text-decoration: none;display: block;color: rgb(27, 148, 172) ;}
+			li{list-style: none;}
+			img{display: block;}
+			.icon {
+				width: 80px;
+				height: 80px;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+				z-index: 1;
+			}
+			/*css reset 结束*/
+			
+			/*common css 开始*/
+			.clearfix{*zoom: 1;}
+			.clearfix:after{content: "";display: block;clear: both;}
+			*{
+				font-family: 'Courier New',"微软雅黑", Courier, monospace;
+			}
+			/*common css 结束*/
+			
+			/*头部样式 开始*/
+			#head{background-image: linear-gradient(to bottom,rgba(149, 227, 249,0.3) 80%,rgb(33, 177, 206) 80%); width: 100%;}
+			#head .headMain{width: 80%;height: 60px;margin: 0 auto;position: relative;}
+			#head .headMain > .logo{
+				float: left;
+				overflow: hidden;
+				font-size: 18px;
+				color: rgb(33, 177, 206);
+				line-height: 60px;
+			}
+			#head .headMain > .nav{float: right;margin-top: 20px;}
+			#head .headMain > .nav > .list > li{float: left;margin-left: 40px;position: relative;overflow: hidden;font-size: 16px;  font-family:"微软雅黑";}
+			#head .headMain > .nav > .list > li .up{color: rgb(17, 97, 97);position: absolute;width: 0;overflow: hidden;transition: 0.5s width;}
+			#head .headMain > .nav > .list > li:hover .up{width: 100%;}
+			#head .headMain > .arrow{width: 21px; height: 11px;background: url(img/menuIndicator-blue.png);
+										position: absolute;left: 50%;bottom: -11px;transition:1s left;
+										z-index: 3;}
+			/*头部样式 结束*/
+			
+			/*内容区样式 开始*/
+			#content{background: rgb(213, 231, 235);position: relative;overflow: hidden;width: 100%;}
+			#content .list{position: absolute;left: 0;top:0;width: 100%;transition:1s top;}
+			#content .list > li{position: relative;background-position:50% 50%!important;overflow: hidden;}
+			#content .list > li > div{width: 100%;height: 100%;background: rgba(255, 255, 255, 0.3);
+									position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+									margin: auto;
+									}
+			#content > .list > li > section{width: 1100px;height: 580px;margin: auto;
+			position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+			}
+			
+			#content .list > .home{background: rgb(213, 231, 235)}
+			#content .list > .course{background: rgb(192, 221, 233);}
+			#content .list > .works{background: url(img/back3.png) no-repeat;background-size: 100%;}
+			#content .list > .about{background: rgba(220, 236, 255, 0.747)}
+			#content .list > .team{background: url(img/back5.jpg) no-repeat;}
+			/* #content .list >li{background-color: whitesmoke;} */
+			/*内容区样式 结束*/
+			
+		</style>
+		<!--分辨率范围:1200 - 2000-->
+	</head>
+	<body>
+		<section id="wrap">
+			<!--流体布局-->
+			<header id="head">
+				<!--固定布局-->
+				<div class="headMain">
+					<h1 class="logo">
+						杨幂Mini
+					</h1>
+					<nav class="nav">
+						<ul class="list clearfix">
+							<li>
+								<a href="javascript:;">
+									<div class="up">基本资料</div>
+									<div class="down">基本资料</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="up">模卡信息</div>
+									<div class="down">模卡信息</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="up">写真造型</div>
+									<div class="down">写真造型</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="up">作品展示</div>
+									<div class="down">作品展示</div>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="arrow"></div>
+				</div>
+			</header>
+			<section id="content">
+				<ul class="list">
+					<li class="home">
+						<img class="out" src="./img/back1.png" alt="yangmi">
+						<div>
+							<div class="left out" >
+								<img src="./img/glass.png" alt="">
+								<h1>杨幂<span>Mini</span></h1>
+								<span>女|30岁</span><br>
+								<span>户籍：北京</span><br>
+								<span>毕业原院校：北京电影学院</span><br>
+								<span>联系方式：18171878799</span>
+								
+							</div>
+							<div class="right out">
+								<h1>主要成就</h1>
+								<ul>
+									<li>第9届中国金鹰电视艺术节最具人气女演员</li>
+									<li>第17届上海电视节白玉兰奖最具人气女演员</li>
+									<li>第50届休斯敦国际电影节最佳女主角</li>
+									<li>第25届北京大学生电影节最受欢迎女演员</li>
+									<li>第16届广州大学生电影节最受欢迎女主角</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="course">
+						<div class="wrap">
+							<div class="left">
+								<canvas></canvas>
+								<div class="inner">
+									
+									<ul>
+										<li>身高：166.5CM </li>
+										<li>体重：45kg&nbsp;&nbsp;&nbsp;</li>
+										<li>肩宽：168cm</li>
+										<li>胸围：90cm</li>
+										<li>腰围：76cm</li>
+										<li>臀围：85cm</li>
+										<li>鞋码：37码</li>
+										
+									</ul>
+								</div>
+							</div>
+							<div class="right">
+								<img src="img/body1.jpg">
+							</div>
+						</div>
+					</li>
+					<!-- <li class="works">
+						<div>works</div>
+					</li> -->
+					<li class="about">
+
+						<canvas></canvas>
+						<section>
+							<ul class="about1">
+								<li class="commonTitle active">
+									<div class="item">
+										<div class="cover">
+											<h1>
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="#icon-eye"></use>
+												  </svg><br/>
+												查看古风造型
+											</h1>
+										</div>
+										<img src="./img/loading.png" data-src="./img/fm_gf.png">
+
+									</div>
+								</li>
+								<li class="commonTitle">
+									<div class="item">
+										<div class="cover">
+											<h1>
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="#icon-eye"></use>
+												  </svg><br/>
+												查看民国造型
+											</h1>
+										</div>
+										<img src="./img/loading.png" data-src="./img/fm_mg.png">
+									</div>
+								</li>
+								<li class="commonTitle">
+									<div class="item">
+										<div class="cover">
+											<h1>
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="#icon-eye"></use>
+												  </svg><br/>
+												查看礼服造型
+											</h1>
+										</div>
+										<img src="./img/loading.png" data-src="./img/fm_lf.png">
+									</div>
+								</li>
+								<li class="commonTitle">
+									<div class="item">
+										<div class="cover">
+											<h1>
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="#icon-eye"></use>
+												  </svg><br/>
+												查看现代造型
+											</h1>
+										</div>
+										<img src="./img/loading.png" data-src="./img/fm_sh.png">
+									</div>
+								</li>
+							</ul>
+							<ul class="about2">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</section>
+					</li>
+					<li class="team">
+						<div class="videoView">
+							<div class="videoShow">
+								<ul>
+									<li>广告</li>
+									<li>综艺</li>
+									<li>走秀</li>
+									<li>仙剑三</li>
+								</ul>
+							</div>
+							<!-- 视频列表 -->
+							<div class="videoList">
+								<ul >
+									<li>
+										<video  controls="controls" width="85%" data-src="./video/1.mp4">
+											您的浏览器不支持 video 标签。
+										</video>
+										<div class="text">
+											<h1>广告</h1>
+											<p>费加罗FIGRO</p>
+										</div>
+									</li>
+									<li>
+										<video  controls="controls" width="85%" data-src="./video/2.mp4" >
+											您的浏览器不支持 video 标签。
+										</video>
+										<div class="text">
+											<h1>走秀</h1>
+											<p>高定礼服秀场</p>
+										</div>
+									</li>
+									<li>
+										<video  controls="controls" width="85%" data-src="./video/3.mp4">
+											您的浏览器不支持 video 标签。
+										</video>
+										<div class="text">
+											<h1>综艺</h1>
+											<p>密室大逃脱</p>
+										</div>
+									</li>
+									<li>
+										<video  controls="controls" width="85%" data-src="./video/4.mp4">
+											您的浏览器不支持 video 标签。
+										</video>
+										<div class="text">
+											<h1>电视剧</h1>
+											<p>三生三世十里桃花</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 视频显示器 -->
+							<div class="videoShow">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<div class="photoView">
+			<div class="photoWrap">
+				<ul>
+					<li>
+						<img src="./img/gf/1.jpg" alt="gf1">
+					</li>
+				</ul>
+			</div>	
+			<div class="next">
+				<svg class="icon " aria-hidden="true" style="color: whitesmoke !important;">
+				   <use xlink:href="#icon-arrow-right-bold"></use>
+				</svg>
+		   </div>
+			<div class="pre">
+				<svg class="icon " aria-hidden="true" style="color: whitesmoke !important;">
+				   <use xlink:href="#icon-arrow-left-bold"></use>
+				</svg>
+		   </div>
+			<div class="close">
+				<svg class="icon " aria-hidden="true" style="color: whitesmoke !important;">
+				   <use xlink:href="#icon-close-bold"></use>
+				</svg>
+		   </div>
+		</div>
+	</body>
+	<script src="./js/index.js"></script>
+</html>

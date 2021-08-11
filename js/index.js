@@ -1,4 +1,4 @@
-//获取dom元素
+//获取dom元素......
 var arrowEl = document.querySelector("#head .headMain > .arrow");
 var liNodes = document.querySelectorAll("#head .headMain > .nav > .list > li");
 var upNodes = document.querySelectorAll("#head .headMain > .nav > .list > li .up");
@@ -262,12 +262,10 @@ function canvasPaomo(){
         paomoTimer1=setInterval(function(){
             ctx.clearRect(0,0,oc.width,oc.height);
             //动画
-            for(var i=0;i<arr.length;i++){
-                
+            for(var i=0;i<arr.length;i++){  
                 if(arr[i].alp<=0){
                     arr.splice(i,1);
                 }
-                
                 arr[i].r++;
                 arr[i].alp-=0.01;
             }
